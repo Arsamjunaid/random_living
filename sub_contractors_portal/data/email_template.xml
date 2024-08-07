@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="email_template_webhook_notification" model="mail.template">
+            <field name="name">Webhook Notification</field>
+            <field name="email_from">${(user.email or user.company_id.email) if user.email}</field>
+            <field name="subject">New Webhook Data Received</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="body_html">
+                <![CDATA[
+                <p>Dear User,</p>
+                <p>You have received new webhook data:</p>
+                <ul>
+                    <li>Email: ${object.email}</li>
+                    <li>Username: ${object.username}</li>
+                    <li>Course ID: ${object.course_id}</li>
+                    <li>Password: ${object.password}</li>
+                </ul>
+                <p>Best regards,</p>
+                <p>Your Company</p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
+<odoo>
+    <data>
+        <record id="email_template_student_registration" model="mail.template">
+            <field name="name">Student Registration</field>
+            <field name="email_from">${(user.email or user.company_id.email) if user.email}</field>
+            <field name="subject">Welcome to Our Course!</field>
+            <field name="model_id" ref="student.model_student_student"/>
+            <field name="body_html">
+                <![CDATA[
+                <p>Dear ${object.name},</p>
+                <p>Welcome to our course!</p>
+                <p>Your course ID: ${object.course_id}</p>
+                <p>Best regards,</p>
+                <p>Your Company</p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

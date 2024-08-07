@@ -1,0 +1,19 @@
+{
+    "email": "user@example.com",
+    "username": "username123",
+    "course_id": "course_456",
+    "password": "secure_password"
+}
+{
+    "email": "user@example.com",
+    "username": "username123",
+    "course_id": "course_456",
+    "password": "secure_password"
+}
+{
+    "email": "user@example.com",
+    "username": "username123",
+    "course_id": "course_456",
+    "password": "secure_password",
+    "option": "log"  // or "notify"
+}

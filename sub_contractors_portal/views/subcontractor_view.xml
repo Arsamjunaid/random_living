@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <!-- Tree View for subcontractor -->
+        <record id="view_sub_contractor_tree" model="ir.ui.view">
+            <field name="name">sub.contractor.tree</field>
+            <field name="model">sub.contractor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                     <field name="email"/>
+                    <field name="abn"/>
+<!--                    <field name="stages" string="Stage"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View for subcontractor -->
+        <record id="view_sub_contractor_form" model="ir.ui.view">
+            <field name="name">sub.contractor.form</field>
+            <field name="model">sub.contractor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+<!--                        <field name="image" widget="image" class="oe_avatar"/>-->
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="email"/>
+<!--                                <field name="bowler" context="{'invisible': [('playee', '=', 'batsman')]}"/>-->
+<!--                                <field name="batsman" context="{'invisible': [('playee', '=', 'bowler')]}"/>-->
+<!--                                <field name="date_of_joining"/>-->
+<!--                                <field name="experience"/>-->
+<!--                                <field name="playing_format"/>-->
+<!--                                <field name="captain"/>-->
+                            </group>
+                            <group>
+                                <field name="abn"/>
+                                <field name="phone_no"/>
+<!--                                <field name="home_town"/>-->
+<!--                                <field name="blood_group"/>-->
+                            </group>
+
+                        </group>
+<!--                        <notebook>-->
+<!--                            <page string="Match Info">-->
+<!--                                <form>-->
+<!--                                    <group>-->
+<!--                                        <field name="matches_played" string="Matches Played" widget="progressbaar"/>-->
+<!--                                        <field name="man_of_match" placeholder="If any"/>-->
+<!--                                        <field name="first_match"/>-->
+<!--                                        <field name="last_match"/>-->
+<!--                                    </group>-->
+<!--                                </form>-->
+<!--                            </page>-->
+<!--                            <page string="Score" name="Score">-->
+<!--                                <form>-->
+<!--                                    <group>-->
+<!--                                        <field name="total_score"/>-->
+<!--                                        <field name="best_score"/>-->
+<!--                                    </group>-->
+<!--                                </form>-->
+<!--                            </page>-->
+<!--                            <page string="Wickets" name="Wickets" modifiers="{'invisible': [('playee', '=', 'batsman')]}">-->
+<!--                                <form>-->
+<!--                                    <group>-->
+<!--                                        <field name="total_wics"/>-->
+<!--                                        <field name="least_wics_in_match"/>-->
+<!--                                    </group>-->
+<!--                                </form>-->
+<!--                            </page>-->
+<!--                            <page string="Other Info" name="other info">-->
+<!--                                <form>-->
+<!--                                    <group>-->
+<!--                                        <field name="description" string="Description" placeholder="Description"/>-->
+<!--                                        <field name="remarks" string="Remarks" placeholder="Remarks"/>-->
+<!--                                    </group>-->
+<!--                                </form>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+                    </sheet>
+<!--                    <div class="oe_chatter">-->
+<!--                        <field name="message_follower_ids" groups="base.group_user"/>-->
+<!--                        <field name="activity_ids"/>-->
+<!--                        <field name="message_ids"/>-->
+<!--                    </div>-->
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+<!--    <record id="action_sub_contractors" model="ir.actions.act_window">-->
+<!--        <field name="name">Sub Contractors</field>-->
+<!--        <field name="res_model">sub.contractor</field>-->
+<!--        <field name="view_mode">kanban,tree,form,activity</field>-->
+<!--        <field name="search_view_id" ref="base.view_res_partner_filter"/>-->
+<!--&lt;!&ndash;        <field name="context">{'default_is_company': True}</field>&ndash;&gt;-->
+<!--        <field name="help" type="html">-->
+<!--          <p class="o_view_nocontent_smiling_face">-->
+<!--            Create a Sub Contractor-->
+<!--&lt;!&ndash;          </p><p>&ndash;&gt;-->
+<!--&lt;!&ndash;            Odoo helps you track all activities related to your contacts.&ndash;&gt;-->
+<!--&lt;!&ndash;          </p>&ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    <record id="action_sub_contracts_view_kanban" model="ir.actions.act_window.view">-->
+<!--        <field name="sequence" eval="0"/>-->
+<!--        <field name="view_mode">kanban</field>-->
+<!--        <field name="view_id" ref="base.res_partner_kanban_view"/>-->
+<!--        <field name="act_window_id" ref="action_sub_contractors"/>-->
+<!--    </record>-->
+<!--    <record id="action_sub_contracts_view_tree" model="ir.actions.act_window.view">-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="view_mode">tree</field>-->
+<!--        <field name="view_id" ref="base.view_partner_tree"/>-->
+<!--        <field name="act_window_id" ref="action_sub_contractors"/>-->
+<!--    </record>-->
+<!--    <record id="action_sub_contracts_view_form" model="ir.actions.act_window.view">-->
+<!--        <field name="sequence" eval="2"/>-->
+<!--        <field name="view_mode">form</field>-->
+<!--        <field name="view_id" ref="base.view_partner_form"/>-->
+<!--        <field name="act_window_id" ref="action_sub_contractors"/>-->
+<!--    </record>-->
+
+<!--&lt;!&ndash; web_icon="contacts,static/description/icon.png"&ndash;&gt;-->
+<!--    <menuitem name="Sub Contractos"-->
+<!--              id="menu_sub_contractors"-->
+<!--              sequence="20"-->
+<!--              groups="base.group_user,base.group_partner_manager"/>-->
+
+<!--    <menuitem id="res_partner_menu_sub_contractors"-->
+<!--              name="Sub Contractors"-->
+<!--              action="action_sub_contractors"-->
+<!--              parent="menu_sub_contractors"-->
+<!--              sequence="2"/>-->
+
+<!--&lt;!&ndash;    <menuitem id="res_partner_menu_config"&ndash;&gt;-->
+<!--&lt;!&ndash;        name="Configuration"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="menu_contacts"&ndash;&gt;-->
+<!--&lt;!&ndash;        groups="base.group_system"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="2"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_partner_category_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_partner_category_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        name="Contact Tags"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="1" parent="res_partner_menu_config"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_partner_title_contact"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_partner_title_contact"&ndash;&gt;-->
+<!--&lt;!&ndash;        name="Contact Titles" parent="res_partner_menu_config"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="3"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="res_partner_industry_menu" name="Industries"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.res_partner_industry_action" parent="res_partner_menu_config"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="4"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_localisation" name="Localization"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="res_partner_menu_config" sequence="5"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_country_partner"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_country" parent="menu_localisation"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="1"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_country_group"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_country_group"&ndash;&gt;-->
+<!--&lt;!&ndash;        name="Country Group" parent="menu_localisation"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="3"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_country_state_partner"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_country_state"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="menu_localisation"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="2"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_config_bank_accounts"&ndash;&gt;-->
+<!--&lt;!&ndash;        name="Bank Accounts"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="res_partner_menu_config"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="6"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_action_res_bank_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_res_bank_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="menu_config_bank_accounts"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="1"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_action_res_partner_bank_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        action="base.action_res_partner_bank_account_form"&ndash;&gt;-->
+<!--&lt;!&ndash;        parent="menu_config_bank_accounts"&ndash;&gt;-->
+<!--&lt;!&ndash;        sequence="2"/>&ndash;&gt;-->
+<!--</odoo>-->

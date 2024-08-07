@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_subcontractor_root"
+                  name="Sub Contractor"
+                  sequence="0"/>
+
+        <menuitem id="menu_subcontractor"
+                  name="Sub Contractor"
+                  parent="sub_contractors_portal.menu_subcontractor_root"
+                  sequence="1"
+                  action="action_sub_contractor"/>
+
+<!--        <menuitem id="menu_students"-->
+<!--                  name="Teams"-->
+<!--                  parent="teams.menu_team"-->
+<!--                  sequence="1"-->
+<!--                  action="action_team"/>-->
+    </data>
+</odoo>

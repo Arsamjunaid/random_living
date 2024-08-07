@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="action_sub_contractor" model="ir.actions.act_window">
+            <field name="name">Sub Contractors</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sub.contractor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="xml">
+                <p class="o_view_nocontent_smiling_face">
+                    Sub Contractors
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
